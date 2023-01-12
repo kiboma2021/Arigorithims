@@ -25,13 +25,10 @@ while True:
         print("You WIN!")
         win+=1
 
-    ans=(input("Do you wish to continue? (Y/N): ")).lower
+    ans=input("Press any key to continue and X to cancel? ").lower
     print(ans)
 
-    while ans is not 'y' or ans is not 'n':
-        ans=(input("Incorrect input! Do you wish to continue? (Y/N): ")).lower
-
-    if ans == 'n':
+    if ans == 'x':
         break
 
 print("Thank you for participating. You have won", win, "times and lost ", loose, "times.")
