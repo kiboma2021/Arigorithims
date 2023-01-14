@@ -4,12 +4,15 @@ Write a program that asks the user how many Fibonnaci numbers to generate and th
 '''
 
 def fibonnaci_generate(n):
-    fib_nums=[1,1]
+    if n == 1:
+        return [0]
+    fib_nums=[0,1]
     for i in range(3,n+1):
         next_num=fib_nums[i-3] + fib_nums[i-2]
         fib_nums.append(next_num)
-    print(fib_nums)
     return fib_nums
 
-fibonnaci_generate(9)
-fibonnaci_generate(99)
+for i in fibonnaci_generate(20):
+    print(i, end=" ")
+    
+print("\n")
