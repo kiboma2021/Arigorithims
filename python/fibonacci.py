@@ -16,3 +16,4 @@ for i in fibonnaci_generate(20):
     print(i, end=" ")
     
 print("\n")
+
