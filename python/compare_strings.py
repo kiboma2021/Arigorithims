@@ -23,4 +23,4 @@ def compareString(str1, str2):
    return True
 
 
-compareString("Hello", "oLtHe")
+compareString("Hello", "oLHel")
