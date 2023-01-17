@@ -10,6 +10,7 @@ divisors=[] #0(1)
 for i in range(1,num): #0(n)
     if num%i == 0:
         divisors.append(i)
-print (divisors)#O(1)
-#0(n+4) # discard the constant time since it doesnt affect overall performance
-# Hence the time complexity is O(n)
+
+for i in divisors:
+    print(i, end=" ")
+print("\n")

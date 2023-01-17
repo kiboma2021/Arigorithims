@@ -12,7 +12,7 @@ def fibonnaci_generate(n):
         fib_nums.append(next_num)
     return fib_nums
 
-for i in fibonnaci_generate(20):
+for i in fibonnaci_generate(1):
     print(i, end=" ")
     
 print("\n")
