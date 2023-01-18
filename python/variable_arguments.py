@@ -2,10 +2,10 @@
 Write python function which takes a variable number of arguments.
 '''
 
-def AddNums(*nums):
+def addNums(*nums):
     total=0
-    for i in nums:
-        total+=i
+    for num in nums:
+        total+=num
     return total
 
-print(AddNums(20,10,5,15))
+print(addNums(10,20,30,45,25,63))
