@@ -5,4 +5,4 @@ def fact(n):
     print(result)
     return (result)
 
-fact(4)
+fact(0)
