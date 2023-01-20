@@ -1,3 +1,8 @@
+'''
+Create an object named p1, and print the value of x:
+
+'''
+
 class myClass:
     x=5
 

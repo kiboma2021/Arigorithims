@@ -5,7 +5,7 @@ eg hello and heoll should be equal
 """
 
 str1="hello"
-print(sorted(str1))
+print(str1)
 
 def compareStr(str1,str2):
     str1=sorted(str1.lower())
