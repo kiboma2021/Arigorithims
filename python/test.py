@@ -1,20 +1,7 @@
-def diagonalDifference(arr):
-    # Write your code here
-    primary=0
-    secondary=0
-    n=len(arr)
-    print(n)
-    
-    for i in range(0,n):
-        print("====",arr[i][n-1-i])
-        primary+=arr[i][i]
-        secondary+=arr[i][n-1-i]
-    diagonaldif=abs(abs(primary)-abs(secondary))
-    return diagonaldif #diagonaldif
+wordic = { 1:"one", 2:"two", 3:"three", 4:"four", 5:"five", 6:"six", 7:"seven", 8:"eight", 9:"nine", 10:"ten", 11:"eleven",
+ 12:"twelve", 13:"thirteen", 14:"fourteen", 15:"quarter", 16:"sixteen", 17:"seventeen", 18:"eighteen", 19:"nineteen",
+   20:"twenty",21:"twenty one", 22:"twenty two", 23:"twenty three", 24:"twenty four", 25:"twenty five",26:"twenty six", 
+   27:"twenty seven", 28:"twenty eight", 29:"twenty nine",30:"half" }
 
-a = [[ 1, 2, 3, -4 ],
-     [ 5, 6, 7, 8 ],
-     [ 1, 2, 3, 4 ],
-     [ -5, 6, 7, 8 ]]
-
-print(diagonalDifference(a))
+time_is=wordic[5] + " o' clock"
+print(time_is)
