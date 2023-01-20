@@ -7,7 +7,7 @@ print("Enter a number:", end="") #0(1)
 num = int(input()) #0(1)
 
 divisors=[] #0(1)
-for i in range(1,num): #0(n)
+for i in range(1,num+1): #0(n)
     if num%i == 0:
         divisors.append(i)
 

@@ -4,23 +4,21 @@ eg hello and heoll should be equal
 
 """
 
-def compareString(str1, str2):
-   if len(str1) != len(str2):
-      print("Strings not the same. They are of different lengths...")
-      return False
+def compareStr(str1,str2):
+    str1=sorted(str1.lower())
+    str2=sorted(str2.lower())
 
-   str1=str1.lower()
-   str2=str2.lower()
+    if len(str1) != len(str2):
+        #print("Length not the same")
+        return False
+    else:
+        for i in range(0,len(str1)):
+            if str1[i]!=str2[i]:
+                #print("Strings are not the same")
+                return False
+    #print("string characters are the same")
+    return True
 
-   str1=''.join(sorted(str1))
-   str2=''.join(sorted(str2))
-
-   for i in range(len(str1)):
-      if str1[i] != str2[i]:
-         print("Strings not the same")
-         return False
-   print("Strings are the same")
-   return True
-
-
-compareString("Hello", "oLHel")
+str1=input("Enter the first string: ")
+str2=input("Enter the second string: ")
+print(compareStr(str1,str2))
