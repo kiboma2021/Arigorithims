@@ -5,8 +5,8 @@ eg hello and heoll should be equal
 """
 
 arr=[2,7,6,54,1]
-arr=sorted(arr,reverse=True)
-print(arr)
+arr.pop()
+print("========",arr)
 
 str1="hello"
 print(str1)
