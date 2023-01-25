@@ -1,31 +1,26 @@
 """
-Compare two strings in python
-eg hello and heoll should be equal
++ - Records a new score that is the sum of the previous two scores
+D - Records a new score that is double the previous score
+C - Invalidates the previous score, removing it from the record
 
 """
+ops=['5','2','C','D','+']
+result=0
+n=len(ops)
+ans=[]
 
-arr=[2,7,6,54,1]
-arr.pop()
-print("========",arr)
-
-str1="hello"
-print(str1)
-
-def compareStr(str1,str2):
-    str1=sorted(str1.lower())
-    str2=sorted(str2.lower())
-
-    if len(str1) != len(str2):
-        #print("Length not the same")
-        return False
+#print(n)
+for i in range(0,n):
+    if ops[i] == '+':
+        ans.append(int(ans[len(ans)-1])+ans[len(ans)-2])
+    elif ops[i]=='D':
+        ans.append(int(ans[len(ans)-1])*2)
+    elif ops[i]=='C':
+        ans.pop()
     else:
-        for i in range(0,len(str1)):
-            if str1[i]!=str2[i]:
-                #print("Strings are not the same")
-                return False
-    #print("string characters are the same")
-    return True
+        ans.append(int(ops[i]))
 
-str1=input("Enter the first string: ")
-str2=input("Enter the second string: ")
-print(compareStr(str1,str2))
+for i in ans:
+    result+=i
+print(result)
+        
