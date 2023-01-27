@@ -1,7 +1,13 @@
-def solution(a, b):
-    # write your code here
-    assert(a<b)
-    assert(a>b)
-    return (a/b)
+def solution(cards):
+    res=0
+    for card in cards:
+        for i in card:
+            if i>res and card.count(i)==1:
+                res=i
+    if res==0:
+        return -1
+    else:
+        return res
 
-print(solution(2, 4))
+cards = [[5,5], [2,2]]
+print(solution(cards))
