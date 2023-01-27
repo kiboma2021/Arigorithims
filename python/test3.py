@@ -1,17 +1,24 @@
+from itertools import combinations
 
 def moseCordeconv(morsecode):
+    morsecode=tuple(morsecode)
     result=[]
     n=len(morsecode)
-    for i in range(0,n):
-        if i<n-1 and len(result)!=0:
-            if morsecode[i]=='.' and morsecode[i+1]=="." and result[len(result)-1]!='.':
-                result.extend('-','-')
+    for j in range(1,n):
+        i=j
+        updatedmorsecode=list(morsecode)
+        while i<n:
+            if updatedmorsecode[i]=='.' and updatedmorsecode[i-1]==".":
+                updatedmorsecode[i]='-'
+                updatedmorsecode[i-1]='-'
+                i+=3
             else:
-                result.append(morsecode[i])
-        else:
-            result.append(morsecode[i])            
-    print(result)
-                
+                i+=1
+
+        updatedmorsecode=''.join(updatedmorsecode)
+        result.append(updatedmorsecode)
+
+    print("=======",result)
 
 morsecode="...."
 moseCordeconv(morsecode)
